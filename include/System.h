@@ -167,6 +167,9 @@ public:
     // See format details at: http://www.cvlibs.net/datasets/kitti/eval_odometry.php
     void SaveTrajectoryKITTI(const string &filename);
 
+    void GetTrajectory(map<double, Sophus::SE3f>& trajectory, Sophus::SE3f& Two);
+
+
     // TODO: Save/Load functions
     // SaveMap(const string &filename);
     // LoadMap(const string &filename);
