@@ -1594,5 +1594,13 @@ string System::CalculateCheckSum(string filename, int type)
     return checksum;
 }
 
+DBoW2::BowVector System::GetCurrentFrameBowVec() {
+  return mpTracker->mCurrentFrame.mBowVec;
+}
+
+cv::Mat System::GetDescriptors() {
+  return mpTracker->mCurrentFrame.mDescriptors;
+}
+
 } //namespace ORB_SLAM
 

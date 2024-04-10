@@ -179,6 +179,8 @@ public:
     int GetTrackingState();
     std::vector<MapPoint*> GetTrackedMapPoints();
     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
+    cv::Mat GetDescriptors();
+    DBoW2::BowVector GetCurrentFrameBowVec();
 
     // For debugging
     double GetTimeFromIMUInit();
