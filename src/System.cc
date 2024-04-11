@@ -1595,6 +1595,8 @@ string System::CalculateCheckSum(string filename, int type)
 }
 
 DBoW2::BowVector System::GetCurrentFrameBowVec() {
+    if(mpTracker->mCurrentFrame.mBowVec.empty())
+        mpTracker->mCurrentFrame.ComputeBoW();
   return mpTracker->mCurrentFrame.mBowVec;
 }
 
