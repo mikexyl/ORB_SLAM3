@@ -1600,6 +1600,12 @@ DBoW2::BowVector System::GetCurrentFrameBowVec() {
   return mpTracker->mCurrentFrame.mBowVec;
 }
 
+DBoW2::FeatureVector System::GetCurrentFrameFeatVec() {
+    if(mpTracker->mCurrentFrame.mBowVec.empty())
+        mpTracker->mCurrentFrame.ComputeBoW();
+  return mpTracker->mCurrentFrame.mFeatVec;
+}
+
 cv::Mat System::GetDescriptors() {
   return mpTracker->mCurrentFrame.mDescriptors;
 }

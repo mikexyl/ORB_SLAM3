@@ -181,6 +181,7 @@ public:
     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
     cv::Mat GetDescriptors();
     DBoW2::BowVector GetCurrentFrameBowVec();
+    DBoW2::FeatureVector GetCurrentFrameFeatVec();
 
     // For debugging
     double GetTimeFromIMUInit();
