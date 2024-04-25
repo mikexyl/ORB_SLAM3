@@ -182,6 +182,8 @@ public:
     cv::Mat GetDescriptors();
     DBoW2::BowVector GetCurrentFrameBowVec();
     DBoW2::FeatureVector GetCurrentFrameFeatVec();
+    std::vector<float> GetKeyPointSigmaSquares();
+    std::vector<float> GetLevelSigma2();
 
     // For debugging
     double GetTimeFromIMUInit();

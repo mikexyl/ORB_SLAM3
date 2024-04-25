@@ -1610,5 +1610,16 @@ cv::Mat System::GetDescriptors() {
   return mpTracker->mCurrentFrame.mDescriptors;
 }
 
+std::vector<float> System::GetKeyPointSigmaSquares() {
+  std::vector<float> vSigmaSquares;
+  for (auto kp : mpTracker->mCurrentFrame.mvKeys)
+    vSigmaSquares.push_back(mpTracker->mCurrentFrame.mvLevelSigma2[kp.octave]);
+  return vSigmaSquares;
+}
+
+std::vector<float> System::GetLevelSigma2() {
+  return mpTracker->mCurrentFrame.mvLevelSigma2;
+}
+
 } //namespace ORB_SLAM
 
