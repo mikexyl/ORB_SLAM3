@@ -1621,5 +1621,9 @@ std::vector<float> System::GetLevelSigma2() {
   return mpTracker->mCurrentFrame.mvLevelSigma2;
 }
 
+Frame* System::GetFrame(){
+    return &mpTracker->mCurrentFrame;
+}
+
 } //namespace ORB_SLAM
 

@@ -184,6 +184,7 @@ public:
     DBoW2::FeatureVector GetCurrentFrameFeatVec();
     std::vector<float> GetKeyPointSigmaSquares();
     std::vector<float> GetLevelSigma2();
+    Frame* GetFrame();
 
     // For debugging
     double GetTimeFromIMUInit();

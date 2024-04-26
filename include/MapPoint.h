@@ -207,6 +207,10 @@ public:
 
     unsigned int mnOriginMapId;
 
+    // Scale invariance distances
+    float mfMinDistance;
+    float mfMaxDistance;
+
 protected:    
 
      // Position in absolute coordinates
@@ -237,10 +241,6 @@ protected:
      MapPoint* mpReplaced;
      // For save relation without pointer, this is necessary for save/load function
      long long int mBackupReplacedId;
-
-     // Scale invariance distances
-     float mfMinDistance;
-     float mfMaxDistance;
 
      Map* mpMap;
 
